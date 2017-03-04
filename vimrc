@@ -1,3 +1,4 @@
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -34,7 +35,9 @@ set encoding=utf8
 
 " Set Whitespace
 set list
-set listchars=tab:>-
+if &listchars ==# 'eol:$'
+	set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
 
 " No annoying sound on errors
 set visualbell
@@ -63,6 +66,11 @@ set hlsearch
 
 "Always show current position
 set incsearch 
+"Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+	nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
+
 
 " Height of the command bar
 set lazyredraw 
@@ -100,12 +108,6 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
 
 "Linebreak on 500 characters
 set lbr
@@ -114,10 +116,3 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap linesswapfile
-
-"Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-	exe "normal mz"
-	%s/\s\+$//ge
-	exe "normal `z"
-endfunc
