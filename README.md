@@ -1,6 +1,7 @@
 This is my Vim config.
 
 For a new machine:
-
-  git clone git@github.com:romainl/dotvim.git .vim      
+```
+  git clone https://github.com/JibranKalia/vim.git      
   echo "runtime vimrc" > .vimrc
+```
