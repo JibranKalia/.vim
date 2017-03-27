@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/nfs/2017/j/jkalia/get_next_line'
+let g:netrw_dirhist_2='/nfs/2017/j/jkalia/Desktop'
+let g:netrw_dirhist_3='/nfs/2017/j/jkalia/ft_printf'
+let g:netrw_dirhist_4='/nfs/2017/j/jkalia/ft_printf/src'
