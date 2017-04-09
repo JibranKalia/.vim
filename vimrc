@@ -1,32 +1,19 @@
-"Vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-Bundle '42header'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Put your non-Plugin stuff after this line
-
-"Pathogen
-execute pathogen#infect()
+"Vim Plug
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/vim-easy-align'
+Plug '42header'
+" NERD tree will be loaded on the first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+call plug#end()
 
 "Opening Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+"Vim has a setting called autowrite that writes the content of the file automatically if you call :make
+set autowrite
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General

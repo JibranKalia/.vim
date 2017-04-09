@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/nfs/2017/j/jkalia/libft-testing-tools/kane_files'
+let g:netrw_dirhist_2='/nfs/2017/j/jkalia/printf/includes'
+let g:netrw_dirhist_3='/nfs/2017/j/jkalia/.vim'
+let g:netrw_dirhist_4='/nfs/2017/j/jkalia/.vim/bundle'
+let g:netrw_dirhist_5='/nfs/2017/j/jkalia/.vim/bundle/42header'
