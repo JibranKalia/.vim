@@ -1,12 +1,8 @@
-
 "Vim Plug
 call plug#begin()
-Plug 'tpope/vim-sensible'
-Plug 'junegunn/vim-easy-align'
 Plug '42header'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 call plug#end()
 
 "Opening Nerdtree
