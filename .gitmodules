@@ -1,0 +1,3 @@
+[submodule "plugged1"]
+	path = plugged1
+	url = https://github.com/scrooloose/nerdtree.git
