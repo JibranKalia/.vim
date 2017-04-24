@@ -7,6 +7,7 @@ call plug#end()
 
 "Opening Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.o$']
 
 "Vim has a setting called autowrite that writes the content of the file automatically if you call :make
 set autowrite
